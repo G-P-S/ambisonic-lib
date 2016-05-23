@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00DA556B1CF3A3EF002B2D0F /* kiss_fftr.h in Headers */ = {isa = PBXBuildFile; fileRef = 00DA556A1CF3A3EF002B2D0F /* kiss_fftr.h */; };
+		00DA556D1CF3A414002B2D0F /* kiss_fft.h in Headers */ = {isa = PBXBuildFile; fileRef = 00DA556C1CF3A414002B2D0F /* kiss_fft.h */; };
 		C9AEF69B10B0489900C7D86D /* Ambisonics.h in Headers */ = {isa = PBXBuildFile; fileRef = C9AEF69A10B0489900C7D86D /* Ambisonics.h */; };
 		C9AEF6B610B048A700C7D86D /* AmbisonicBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9AEF69C10B048A700C7D86D /* AmbisonicBase.cpp */; };
 		C9AEF6B710B048A700C7D86D /* AmbisonicBase.h in Headers */ = {isa = PBXBuildFile; fileRef = C9AEF69D10B048A700C7D86D /* AmbisonicBase.h */; };
@@ -35,23 +37,24 @@
 		C9AEF6CE10B048A700C7D86D /* BFormat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9AEF6B410B048A700C7D86D /* BFormat.cpp */; };
 		C9AEF6CF10B048A700C7D86D /* BFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = C9AEF6B510B048A700C7D86D /* BFormat.h */; };
 		C9AEF6D110B048C200C7D86D /* mit_hrtf_lib.h in Headers */ = {isa = PBXBuildFile; fileRef = C9AEF6D010B048C200C7D86D /* mit_hrtf_lib.h */; };
-		C9F05EF81A4C48A100EEF233 /* libamblib.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = D2AAC046055464E500DB518D /* libamblib.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C9F05EF71A4C489600EEF233 /* CopyFiles */ = {
+		C9F05EF71A4C489600EEF233 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = ../../../../../../library;
+			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				C9F05EF81A4C48A100EEF233 /* libamblib.a in CopyFiles */,
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		00DA556A1CF3A3EF002B2D0F /* kiss_fftr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = kiss_fftr.h; path = ../../kissfft/tools/kiss_fftr.h; sourceTree = "<group>"; };
+		00DA556C1CF3A414002B2D0F /* kiss_fft.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = kiss_fft.h; path = ../../kissfft/kiss_fft.h; sourceTree = "<group>"; };
 		C9AEF69A10B0489900C7D86D /* Ambisonics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ambisonics.h; path = ../include/Ambisonics.h; sourceTree = SOURCE_ROOT; };
 		C9AEF69C10B048A700C7D86D /* AmbisonicBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AmbisonicBase.cpp; path = ../source/AmbisonicBase.cpp; sourceTree = SOURCE_ROOT; };
 		C9AEF69D10B048A700C7D86D /* AmbisonicBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AmbisonicBase.h; path = ../source/AmbisonicBase.h; sourceTree = SOURCE_ROOT; };
@@ -97,6 +100,8 @@
 		08FB7794FE84155DC02AAC07 /* amblib */ = {
 			isa = PBXGroup;
 			children = (
+				00DA556C1CF3A414002B2D0F /* kiss_fft.h */,
+				00DA556A1CF3A3EF002B2D0F /* kiss_fftr.h */,
 				08FB7795FE84155DC02AAC07 /* Source */,
 				C6A0FF2B0290797F04C91782 /* Documentation */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
@@ -161,6 +166,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00DA556D1CF3A414002B2D0F /* kiss_fft.h in Headers */,
+				00DA556B1CF3A3EF002B2D0F /* kiss_fftr.h in Headers */,
 				C9AEF69B10B0489900C7D86D /* Ambisonics.h in Headers */,
 				C9AEF6B710B048A700C7D86D /* AmbisonicBase.h in Headers */,
 				C9AEF6B910B048A700C7D86D /* AmbisonicBinauralizer.h in Headers */,
@@ -189,7 +196,7 @@
 				D2AAC043055464E500DB518D /* Headers */,
 				D2AAC044055464E500DB518D /* Sources */,
 				D289987405E68DCB004EDB86 /* Frameworks */,
-				C9F05EF71A4C489600EEF233 /* CopyFiles */,
+				C9F05EF71A4C489600EEF233 /* Copy Files */,
 			);
 			buildRules = (
 			);
