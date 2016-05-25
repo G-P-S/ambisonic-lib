@@ -29,6 +29,7 @@ enum Amblib_SpeakerSetUps
     kAmblib_Decadron, kAmblib_Dodecadron, 
 	///3D Speaker Setup
 	kAmblib_Cube,
+    kAmblib_Headphones,
 	kAmblib_NumOfSpeakerSetUps
 };
 

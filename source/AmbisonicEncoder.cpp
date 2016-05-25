@@ -12,7 +12,7 @@
 /*#                                                                          #*/
 /*############################################################################*/
 
-
+#include <iostream>
 #include "AmbisonicEncoder.h"
 
 
@@ -48,9 +48,19 @@ void CAmbisonicEncoder::Process(AmbFloat* pfSrc, AmbUInt nSamples, CBFormat* pfD
 	AmbUInt niSample = 0;
 	for(niChannel = 0; niChannel < m_nChannelCount; niChannel++)
 	{
+     //   std::cout<<"channel: "<<niChannel<<"\n"<<"[";
 		for(niSample = 0; niSample < nSamples; niSample++)
 		{
-			pfDst->m_ppfChannels[niChannel][niSample] = pfSrc[niSample] * m_pfCoeff[niChannel];
+            AmbFloat tmpCoef = m_pfCoeff[niChannel];
+            AmbFloat tmpSrcS = pfSrc[niSample];
+            AmbFloat tmpDstS = tmpSrcS * tmpCoef;
+            pfDst->m_ppfChannels[niChannel][niSample] += tmpDstS;
+            /*std::cout<<tmpDstS;
+            if(niSample < nSamples-1)
+            {
+                std::cout<<", ";
+            } */
 		}
+//        std::cout<<"]"<<"\n";
 	}
 }
