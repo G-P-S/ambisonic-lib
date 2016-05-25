@@ -259,6 +259,16 @@ void CAmbisonicDecoder::SpeakerSetUp(AmbInt nSpeakerSetUp, AmbUInt nSpeakers)
 			m_pAmbSpeakers[niSpeaker].SetPosition(polPosition);
 		}
 		break;
+    case kAmblib_Headphones:
+            m_nSpeakers = 2;
+            m_pAmbSpeakers = new CAmbisonicSpeaker[m_nSpeakers];
+            polPosition.fAzimuth = DegreesToRadians(90.f);
+            m_pAmbSpeakers[0].Create(m_nOrder, m_b3D, 0);
+            m_pAmbSpeakers[0].SetPosition(polPosition);
+            polPosition.fAzimuth = DegreesToRadians(-90.f);
+            m_pAmbSpeakers[1].Create(m_nOrder, m_b3D, 0);
+            m_pAmbSpeakers[1].SetPosition(polPosition);
+            break;
 	default:
 		m_nSpeakers = 1;
 		m_pAmbSpeakers = new CAmbisonicSpeaker[m_nSpeakers];

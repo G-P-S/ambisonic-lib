@@ -19,7 +19,7 @@
 #include <math.h>
 #include <memory.h>
 
-#define DEFAULT_ORDER	1
+#define DEFAULT_ORDER	3
 #define	DEFAULT_HEIGHT	true
 #define DEFAULT_BFORMAT_SAMPLECOUNT	512
 #define DEFAULT_SAMPLERATE 44100
