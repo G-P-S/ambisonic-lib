@@ -44,6 +44,7 @@ void CAmbisonicSpeaker::Refresh()
 
 void CAmbisonicSpeaker::Process(CBFormat* pBFSrc, AmbUInt nSamples, AmbFloat* pfDst)
 {
+#pragma omp parallel for
 	AmbUInt niChannel = 0;
 	AmbUInt niSample = 0;
 	memset(pfDst, 0, nSamples * sizeof(AmbFloat));

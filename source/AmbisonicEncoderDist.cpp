@@ -69,11 +69,12 @@ void CAmbisonicEncoderDist::Refresh()
 	CAmbisonicEncoder::Refresh();
 
 	m_fDelay = fabs(m_polPosition.fDistance) / knSpeedOfSound * m_nSampleRate; //TODO abs() sees AmbFloat as int!
+#if 1
 	m_nDelay = (AmbInt)m_fDelay;
 	m_fDelay -= m_nDelay;
 	m_nOutA = (m_nIn - m_nDelay + m_nDelayBufferLength) % m_nDelayBufferLength;
 	m_nOutB = (m_nOutA + 1) % m_nDelayBufferLength;
-
+#endif
 	//Source is outside speaker array
 	if(fabs(m_polPosition.fDistance) >= m_fRoomRadius)
 	{
@@ -87,7 +88,7 @@ void CAmbisonicEncoderDist::Refresh()
 	}
 }
 
-void CAmbisonicEncoderDist::Process(AmbFloat* pfSrc, AmbUInt nSamples, CBFormat* pfDst)
+void CAmbisonicEncoderDist::Process(AmbFloat* pfSrc, AmbUInt nSamples, CBFormat* pfDst, bool replacing)
 {
 	AmbUInt niChannel = 0;
 	AmbUInt niSample = 0;
@@ -106,7 +107,13 @@ void CAmbisonicEncoderDist::Process(AmbFloat* pfSrc, AmbUInt nSamples, CBFormat*
 		fSrcSample *= m_fExteriorGain;
 		for(niChannel = 1; niChannel < m_nChannelCount; niChannel++)
 		{
-			pfDst->m_ppfChannels[niChannel][niSample] = fSrcSample * m_pfCoeff[niChannel];
+            if(replacing)
+            {
+                pfDst->m_ppfChannels[niChannel][niSample] = fSrcSample * m_pfCoeff[niChannel];
+            } else
+            {
+                pfDst->m_ppfChannels[niChannel][niSample] += fSrcSample * m_pfCoeff[niChannel];
+            }
 		}
 
 		m_nIn = (m_nIn + 1) % m_nDelayBufferLength;
