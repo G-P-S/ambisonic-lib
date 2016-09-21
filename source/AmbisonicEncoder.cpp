@@ -46,27 +46,33 @@ void CAmbisonicEncoder::Process(AmbFloat* pfSrc, AmbUInt nSamples, CBFormat* pfD
 {
 	AmbUInt niChannel = 0;
 	AmbUInt niSample = 0;
-	for(niChannel = 0; niChannel < m_nChannelCount; niChannel++)
-	{
-     //   std::cout<<"channel: "<<niChannel<<"\n"<<"[";
-		for(niSample = 0; niSample < nSamples; niSample++)
-		{
-            AmbFloat tmpCoef = m_pfCoeff[niChannel];
-            AmbFloat tmpSrcS = pfSrc[niSample];
-            AmbFloat tmpDstS = tmpSrcS * tmpCoef;
-            if(replacing)
+    if(replacing)
+    {
+        for(niChannel = 0; niChannel < m_nChannelCount; niChannel++)
+        {
+
+            for(niSample = 0; niSample < nSamples; niSample++)
             {
+                AmbFloat tmpCoef = m_pfCoeff[niChannel];
+                AmbFloat tmpSrcS = pfSrc[niSample];
+                AmbFloat tmpDstS = tmpSrcS * tmpCoef;
+
                 pfDst->m_ppfChannels[niChannel][niSample] = tmpDstS;
-            } else
+            }
+        }
+    }
+    else
+    {
+        for(niChannel = 0; niChannel < m_nChannelCount; niChannel++)
+        {
+            
+            for(niSample = 0; niSample < nSamples; niSample++)
             {
+                AmbFloat tmpCoef = m_pfCoeff[niChannel];
+                AmbFloat tmpSrcS = pfSrc[niSample];
+                AmbFloat tmpDstS = tmpSrcS * tmpCoef;
                 pfDst->m_ppfChannels[niChannel][niSample] += tmpDstS;
             }
-            /*std::cout<<tmpDstS;
-            if(niSample < nSamples-1)
-            {
-                std::cout<<", ";
-            } */
-		}
-//        std::cout<<"]"<<"\n";
-	}
+        }
+    }
 }

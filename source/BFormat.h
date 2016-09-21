@@ -93,6 +93,7 @@ protected:
 	//so must list each friend class manually
 	friend class CAmbisonicEncoder;
 	friend class CAmbisonicEncoderDist;
+    friend class CAmbisonicEncoderDistSansDelay;
 	friend class CAmbisonicDecoder;
 	friend class CAmbisonicSpeaker;
 	friend class CAmbisonicMicrophone;

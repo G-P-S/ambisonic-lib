@@ -14,7 +14,9 @@
 
 
 #include "AmbisonicBinauralizer.h"
+#include <emmintrin.h>
 
+#define SIMDOPTIMIZE
 
 CAmbisonicBinauralizer::CAmbisonicBinauralizer()
 {
@@ -128,25 +130,17 @@ AmbBool CAmbisonicBinauralizer::Create(	AmbUInt nOrder,
 				nAzimuth -= 360;
 			nElevation = (AmbInt)RadiansToDegrees(position.fElevation);
 			//Get HRTFs for given position
-			nResult = mit_hrtf_get(&nAzimuth, &nElevation, nSampleRate, bDiffused, psHRTF[0], psHRTF[1]);
-			if(!nResult)
-				nResult = nResult;
+			mit_hrtf_get(&nAzimuth, &nElevation, nSampleRate, bDiffused, psHRTF[0], psHRTF[1]);
+            fCoefficient = m_AmbDecoder.GetCoefficient(niSpeaker, niChannel);
 			//Convert from short to float representation
 			for(niTap = 0; niTap < m_nTaps; niTap++)
 			{
 				pfHRTF[0][niTap] = psHRTF[0][niTap] / 32767.f;
 				pfHRTF[1][niTap] = psHRTF[1][niTap] / 32767.f;
-			}
 			//Scale the HRTFs by the coefficient of the current channel/component
-			fCoefficient = m_AmbDecoder.GetCoefficient(niSpeaker, niChannel);
-			for(niTap = 0; niTap < m_nTaps; niTap++)
-			{
 				pfHRTF[0][niTap] *= fCoefficient;
 				pfHRTF[1][niTap] *= fCoefficient;
-			}
 			//Accumulate channel/component HRTF
-			for(niTap = 0; niTap < m_nTaps; niTap++)
-			{
 				ppfAccumulator[0][niChannel][niTap] += pfHRTF[0][niTap];
 				ppfAccumulator[1][niChannel][niTap] += pfHRTF[1][niTap];
 			}
@@ -228,6 +222,13 @@ void CAmbisonicBinauralizer::Process(CBFormat* pBFSrc,
 	AmbUInt ni = 0;
 	kiss_fft_cpx cpTemp;
 
+#ifdef SIMDOPTIMIZE
+    //AmbFloat tempA[4] = {0.0f, 0.0f, 0.0f, 0.0f};
+    //AmbFloat tempB[4] = {0.0f, 0.0f, 0.0f, 0.0f};
+    AmbFloat pFFTScaler[4] = {m_fFFTScaler, m_fFFTScaler, m_fFFTScaler, m_fFFTScaler};
+    __m128 vFFTScaler = _mm_loadu_ps(pFFTScaler);
+
+#endif //SIMDOPTIMIZE
 	for(niEar = 0; niEar < 2; niEar++)
 	{
 		memset(m_pfScratchBufferA, 0, m_nFFTSize * sizeof(AmbFloat));
@@ -248,9 +249,16 @@ void CAmbisonicBinauralizer::Process(CBFormat* pBFSrc,
 			for(ni = 0; ni < m_nFFTSize; ni++)
 				m_pfScratchBufferA[ni] += m_pfScratchBufferB[ni];
 		}
-		for(ni = 0; ni < m_nFFTSize; ni++)
+#ifdef SIMDOPTIMIZE
+        for(ni = 0; ni < m_nFFTSize>>2; ni++)
+        {
+            *(((__m128*) m_pfScratchBufferA) + ni) = _mm_mul_ps(*(((__m128*) m_pfScratchBufferA) + ni), vFFTScaler);
+        }
+#else // SIMDOPTIMIZE
+        for(ni = 0; ni < m_nFFTSize; ni++)
 			m_pfScratchBufferA[ni] *= m_fFFTScaler;
-		memcpy(ppfDst[niEar], m_pfScratchBufferA, m_nBlockSize * sizeof(AmbFloat));
+#endif // SIMDOPTIMIZE
+        memcpy(ppfDst[niEar], m_pfScratchBufferA, m_nBlockSize * sizeof(AmbFloat));
 		for(ni = 0; ni < m_nOverlapLength; ni++)
 			ppfDst[niEar][ni] += m_pfOverlap[niEar][ni];
 		memcpy(m_pfOverlap[niEar], &m_pfScratchBufferA[m_nBlockSize], m_nOverlapLength * sizeof(AmbFloat));

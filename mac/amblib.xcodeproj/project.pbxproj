@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		009521CE1D63C6DF00A47621 /* AmbisonicEncoderDistSansDelay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 009521CC1D63C6DF00A47621 /* AmbisonicEncoderDistSansDelay.cpp */; };
+		009521CF1D63C6DF00A47621 /* AmbisonicEncoderDistSansDelay.h in Headers */ = {isa = PBXBuildFile; fileRef = 009521CD1D63C6DF00A47621 /* AmbisonicEncoderDistSansDelay.h */; };
+		009522831D67A7E200A47621 /* kiss_fft.c in Sources */ = {isa = PBXBuildFile; fileRef = 009522821D67A7E200A47621 /* kiss_fft.c */; };
+		009522851D67A86E00A47621 /* kiss_fftr.c in Sources */ = {isa = PBXBuildFile; fileRef = 009522841D67A86E00A47621 /* kiss_fftr.c */; };
+		009522871D67A8C900A47621 /* _kiss_fft_guts.h in Headers */ = {isa = PBXBuildFile; fileRef = 009522861D67A8C900A47621 /* _kiss_fft_guts.h */; };
+		009522891D67A8E000A47621 /* kissfft.hh in Headers */ = {isa = PBXBuildFile; fileRef = 009522881D67A8E000A47621 /* kissfft.hh */; };
+		009522941D67A8EF00A47621 /* fftutil.c in Sources */ = {isa = PBXBuildFile; fileRef = 0095228A1D67A8EF00A47621 /* fftutil.c */; };
+		009522951D67A8EF00A47621 /* kfc.c in Sources */ = {isa = PBXBuildFile; fileRef = 0095228B1D67A8EF00A47621 /* kfc.c */; };
+		009522961D67A8EF00A47621 /* kfc.h in Headers */ = {isa = PBXBuildFile; fileRef = 0095228C1D67A8EF00A47621 /* kfc.h */; };
+		009522971D67A8EF00A47621 /* kiss_fastfir.c in Sources */ = {isa = PBXBuildFile; fileRef = 0095228D1D67A8EF00A47621 /* kiss_fastfir.c */; };
+		009522981D67A8EF00A47621 /* kiss_fftnd.c in Sources */ = {isa = PBXBuildFile; fileRef = 0095228E1D67A8EF00A47621 /* kiss_fftnd.c */; };
+		009522991D67A8EF00A47621 /* kiss_fftnd.h in Headers */ = {isa = PBXBuildFile; fileRef = 0095228F1D67A8EF00A47621 /* kiss_fftnd.h */; };
+		0095229A1D67A8EF00A47621 /* kiss_fftndr.c in Sources */ = {isa = PBXBuildFile; fileRef = 009522901D67A8EF00A47621 /* kiss_fftndr.c */; };
+		0095229B1D67A8EF00A47621 /* kiss_fftndr.h in Headers */ = {isa = PBXBuildFile; fileRef = 009522911D67A8EF00A47621 /* kiss_fftndr.h */; };
 		00DA556B1CF3A3EF002B2D0F /* kiss_fftr.h in Headers */ = {isa = PBXBuildFile; fileRef = 00DA556A1CF3A3EF002B2D0F /* kiss_fftr.h */; };
 		00DA556D1CF3A414002B2D0F /* kiss_fft.h in Headers */ = {isa = PBXBuildFile; fileRef = 00DA556C1CF3A414002B2D0F /* kiss_fft.h */; };
 		C9AEF69B10B0489900C7D86D /* Ambisonics.h in Headers */ = {isa = PBXBuildFile; fileRef = C9AEF69A10B0489900C7D86D /* Ambisonics.h */; };
@@ -70,6 +84,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		009521CC1D63C6DF00A47621 /* AmbisonicEncoderDistSansDelay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AmbisonicEncoderDistSansDelay.cpp; path = ../source/AmbisonicEncoderDistSansDelay.cpp; sourceTree = "<group>"; };
+		009521CD1D63C6DF00A47621 /* AmbisonicEncoderDistSansDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AmbisonicEncoderDistSansDelay.h; path = ../source/AmbisonicEncoderDistSansDelay.h; sourceTree = "<group>"; };
+		009522821D67A7E200A47621 /* kiss_fft.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = kiss_fft.c; path = ../../kissfft/kiss_fft.c; sourceTree = "<group>"; };
+		009522841D67A86E00A47621 /* kiss_fftr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = kiss_fftr.c; path = ../../kissfft/tools/kiss_fftr.c; sourceTree = "<group>"; };
+		009522861D67A8C900A47621 /* _kiss_fft_guts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _kiss_fft_guts.h; path = ../../kissfft/_kiss_fft_guts.h; sourceTree = "<group>"; };
+		009522881D67A8E000A47621 /* kissfft.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = kissfft.hh; path = ../../kissfft/kissfft.hh; sourceTree = "<group>"; };
+		0095228A1D67A8EF00A47621 /* fftutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fftutil.c; path = ../../kissfft/tools/fftutil.c; sourceTree = "<group>"; };
+		0095228B1D67A8EF00A47621 /* kfc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = kfc.c; path = ../../kissfft/tools/kfc.c; sourceTree = "<group>"; };
+		0095228C1D67A8EF00A47621 /* kfc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kfc.h; path = ../../kissfft/tools/kfc.h; sourceTree = "<group>"; };
+		0095228D1D67A8EF00A47621 /* kiss_fastfir.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = kiss_fastfir.c; path = ../../kissfft/tools/kiss_fastfir.c; sourceTree = "<group>"; };
+		0095228E1D67A8EF00A47621 /* kiss_fftnd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = kiss_fftnd.c; path = ../../kissfft/tools/kiss_fftnd.c; sourceTree = "<group>"; };
+		0095228F1D67A8EF00A47621 /* kiss_fftnd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kiss_fftnd.h; path = ../../kissfft/tools/kiss_fftnd.h; sourceTree = "<group>"; };
+		009522901D67A8EF00A47621 /* kiss_fftndr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = kiss_fftndr.c; path = ../../kissfft/tools/kiss_fftndr.c; sourceTree = "<group>"; };
+		009522911D67A8EF00A47621 /* kiss_fftndr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kiss_fftndr.h; path = ../../kissfft/tools/kiss_fftndr.h; sourceTree = "<group>"; };
 		00DA556A1CF3A3EF002B2D0F /* kiss_fftr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = kiss_fftr.h; path = ../../kissfft/tools/kiss_fftr.h; sourceTree = "<group>"; };
 		00DA556C1CF3A414002B2D0F /* kiss_fft.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = kiss_fft.h; path = ../../kissfft/kiss_fft.h; sourceTree = "<group>"; };
 		00E5DC151D107D4B00E4F9DC /* mit_hrtf_lib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mit_hrtf_lib.xcodeproj; path = "/Users/jmariglio/Documents/shits/gopro-lib-cfmediaplayerg2/Mac/CFMediaPlayerLibG2/../../../3rdparty/mit-hrtf-lib/mac/mit_hrtf_lib.xcodeproj"; sourceTree = "<absolute>"; };
@@ -128,7 +156,19 @@
 			children = (
 				00E5DC151D107D4B00E4F9DC /* mit_hrtf_lib.xcodeproj */,
 				00DA556C1CF3A414002B2D0F /* kiss_fft.h */,
+				009522881D67A8E000A47621 /* kissfft.hh */,
 				00DA556A1CF3A3EF002B2D0F /* kiss_fftr.h */,
+				009522841D67A86E00A47621 /* kiss_fftr.c */,
+				009522821D67A7E200A47621 /* kiss_fft.c */,
+				009522861D67A8C900A47621 /* _kiss_fft_guts.h */,
+				0095228A1D67A8EF00A47621 /* fftutil.c */,
+				0095228B1D67A8EF00A47621 /* kfc.c */,
+				0095228C1D67A8EF00A47621 /* kfc.h */,
+				0095228D1D67A8EF00A47621 /* kiss_fastfir.c */,
+				0095228E1D67A8EF00A47621 /* kiss_fftnd.c */,
+				0095228F1D67A8EF00A47621 /* kiss_fftnd.h */,
+				009522901D67A8EF00A47621 /* kiss_fftndr.c */,
+				009522911D67A8EF00A47621 /* kiss_fftndr.h */,
 				08FB7795FE84155DC02AAC07 /* Source */,
 				C6A0FF2B0290797F04C91782 /* Documentation */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
@@ -139,6 +179,8 @@
 		08FB7795FE84155DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				009521CC1D63C6DF00A47621 /* AmbisonicEncoderDistSansDelay.cpp */,
+				009521CD1D63C6DF00A47621 /* AmbisonicEncoderDistSansDelay.h */,
 				C9AEF6D010B048C200C7D86D /* mit_hrtf_lib.h */,
 				C9AEF69C10B048A700C7D86D /* AmbisonicBase.cpp */,
 				C9AEF69D10B048A700C7D86D /* AmbisonicBase.h */,
@@ -198,14 +240,20 @@
 				C9AEF69B10B0489900C7D86D /* Ambisonics.h in Headers */,
 				C9AEF6B710B048A700C7D86D /* AmbisonicBase.h in Headers */,
 				C9AEF6B910B048A700C7D86D /* AmbisonicBinauralizer.h in Headers */,
+				0095229B1D67A8EF00A47621 /* kiss_fftndr.h in Headers */,
 				C9AEF6BB10B048A700C7D86D /* AmbisonicCommons.h in Headers */,
 				C9AEF6BD10B048A700C7D86D /* AmbisonicDecoder.h in Headers */,
 				C9AEF6BF10B048A700C7D86D /* AmbisonicEncoder.h in Headers */,
+				009521CF1D63C6DF00A47621 /* AmbisonicEncoderDistSansDelay.h in Headers */,
 				C9AEF6C110B048A700C7D86D /* AmbisonicEncoderDist.h in Headers */,
+				009522891D67A8E000A47621 /* kissfft.hh in Headers */,
 				C9AEF6C310B048A700C7D86D /* AmbisonicMicrophone.h in Headers */,
+				009522961D67A8EF00A47621 /* kfc.h in Headers */,
 				C9AEF6C510B048A700C7D86D /* AmbisonicProcessor.h in Headers */,
 				C9AEF6C810B048A700C7D86D /* AmbisonicSource.h in Headers */,
+				009522991D67A8EF00A47621 /* kiss_fftnd.h in Headers */,
 				C9AEF6CA10B048A700C7D86D /* AmbisonicSpeaker.h in Headers */,
+				009522871D67A8C900A47621 /* _kiss_fft_guts.h in Headers */,
 				C9AEF6CB10B048A700C7D86D /* AmbisonicTypesDefinesCommons.h in Headers */,
 				C9AEF6CD10B048A700C7D86D /* AmbisonicZoomer.h in Headers */,
 				C9AEF6CF10B048A700C7D86D /* BFormat.h in Headers */,
@@ -280,13 +328,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				009522981D67A8EF00A47621 /* kiss_fftnd.c in Sources */,
 				C9AEF6B610B048A700C7D86D /* AmbisonicBase.cpp in Sources */,
 				C9AEF6B810B048A700C7D86D /* AmbisonicBinauralizer.cpp in Sources */,
 				C9AEF6BA10B048A700C7D86D /* AmbisonicCommons.cpp in Sources */,
+				009522971D67A8EF00A47621 /* kiss_fastfir.c in Sources */,
 				C9AEF6BC10B048A700C7D86D /* AmbisonicDecoder.cpp in Sources */,
+				0095229A1D67A8EF00A47621 /* kiss_fftndr.c in Sources */,
 				C9AEF6BE10B048A700C7D86D /* AmbisonicEncoder.cpp in Sources */,
+				009522831D67A7E200A47621 /* kiss_fft.c in Sources */,
+				009522951D67A8EF00A47621 /* kfc.c in Sources */,
 				C9AEF6C010B048A700C7D86D /* AmbisonicEncoderDist.cpp in Sources */,
+				009522851D67A86E00A47621 /* kiss_fftr.c in Sources */,
 				C9AEF6C210B048A700C7D86D /* AmbisonicMicrophone.cpp in Sources */,
+				009522941D67A8EF00A47621 /* fftutil.c in Sources */,
+				009521CE1D63C6DF00A47621 /* AmbisonicEncoderDistSansDelay.cpp in Sources */,
 				C9AEF6C410B048A700C7D86D /* AmbisonicProcessor.cpp in Sources */,
 				C9AEF6C610B048A700C7D86D /* Ambisonics.cpp in Sources */,
 				C9AEF6C710B048A700C7D86D /* AmbisonicSource.cpp in Sources */,

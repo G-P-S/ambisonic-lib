@@ -24,6 +24,7 @@
 #include "../source/AmbisonicMicrophone.h"
 #include "../source/AmbisonicEncoder.h"
 #include "../source/AmbisonicEncoderDist.h"
+#include "../source/AmbisonicEncoderDistSansDelay.h"
 #include "../source/AmbisonicDecoder.h"
 #include "../source/AmbisonicProcessor.h"
 #include "../source/AmbisonicBinauralizer.h"

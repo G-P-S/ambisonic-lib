@@ -49,7 +49,7 @@ public:
 	/**
 		Encode mono stream to B-Format.
 	*/
-	void Process(AmbFloat* pfSrc, AmbUInt nSamples, CBFormat* pBFDst);
+	void Process(AmbFloat* pfSrc, AmbUInt nSamples, CBFormat* pBFDst, bool replacing = true);
 	/**
 		Set the radius of the intended playback speaker setup which is used for
 		the interior effect (W-Panning).

@@ -108,9 +108,10 @@ CBFormat& CBFormat::operator += (const CBFormat &bf)
 {
 	AmbUInt niChannel = 0;
 	AmbUInt niSample = 0;
-	for(niChannel = 0; niChannel < m_nChannelCount; niChannel++)
+    for(niSample = 0; niSample < m_nSamples; niSample++)
 	{
-		for(niSample = 0; niSample < m_nSamples; niSample++)
+        for(niChannel = 0; niChannel < m_nChannelCount; niChannel++)
+		
 		{
 			m_ppfChannels[niChannel][niSample] += bf.m_ppfChannels[niChannel][niSample];
 		}
