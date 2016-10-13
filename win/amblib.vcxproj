@@ -157,6 +157,13 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\kissfft\kiss_fft.c" />
+    <ClCompile Include="..\..\kissfft\tools\kfc.c" />
+    <ClCompile Include="..\..\kissfft\tools\kiss_fastfir.c" />
+    <ClCompile Include="..\..\kissfft\tools\kiss_fftnd.c" />
+    <ClCompile Include="..\..\kissfft\tools\kiss_fftndr.c" />
+    <ClCompile Include="..\..\kissfft\tools\kiss_fftr.c" />
+    <ClCompile Include="..\..\mit-hrtf-lib\source\mit_hrtf_lib.c" />
     <ClCompile Include="..\source\AmbisonicBase.cpp" />
     <ClCompile Include="..\source\AmbisonicBinauralizer.cpp" />
     <ClCompile Include="..\source\AmbisonicCommons.cpp" />
@@ -173,7 +180,11 @@
     <ClCompile Include="..\source\BFormat.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\kissfft\kissfft.hh" />
+    <ClInclude Include="..\..\kissfft\kiss_fft.h" />
     <ClInclude Include="..\..\kissfft\tools\kiss_fftr.h" />
+    <ClInclude Include="..\..\kissfft\_kiss_fft_guts.h" />
+    <ClInclude Include="..\..\mit-hrtf-lib\include\mit_hrtf_lib.h" />
     <ClInclude Include="..\source\AmbisonicBase.h" />
     <ClInclude Include="..\source\AmbisonicBinauralizer.h" />
     <ClInclude Include="..\source\AmbisonicCommons.h" />
