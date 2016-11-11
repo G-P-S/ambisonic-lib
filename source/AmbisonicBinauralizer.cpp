@@ -223,11 +223,8 @@ void CAmbisonicBinauralizer::Process(CBFormat* pBFSrc,
 	kiss_fft_cpx cpTemp;
 
 #ifdef SIMDOPTIMIZE
-    //AmbFloat tempA[4] = {0.0f, 0.0f, 0.0f, 0.0f};
-    //AmbFloat tempB[4] = {0.0f, 0.0f, 0.0f, 0.0f};
     AmbFloat pFFTScaler[4] = {m_fFFTScaler, m_fFFTScaler, m_fFFTScaler, m_fFFTScaler};
     __m128 vFFTScaler = _mm_loadu_ps(pFFTScaler);
-
 #endif //SIMDOPTIMIZE
 	for(niEar = 0; niEar < 2; niEar++)
 	{
@@ -260,8 +257,20 @@ void CAmbisonicBinauralizer::Process(CBFormat* pBFSrc,
 #endif // SIMDOPTIMIZE
         memcpy(ppfDst[niEar], m_pfScratchBufferA, m_nBlockSize * sizeof(AmbFloat));
 		for(ni = 0; ni < m_nOverlapLength; ni++)
+        {
 			ppfDst[niEar][ni] += m_pfOverlap[niEar][ni];
-		memcpy(m_pfOverlap[niEar], &m_pfScratchBufferA[m_nBlockSize], m_nOverlapLength * sizeof(AmbFloat));
+        }
+        memcpy(m_pfOverlap[niEar], &m_pfScratchBufferA[m_nBlockSize], m_nOverlapLength * sizeof(AmbFloat));
+        for(ni = 0; ni < m_nBlockSize; ni++)
+        {
+            if(ppfDst[niEar][ni] > 1)
+            {
+                ppfDst[niEar][ni] = 1;
+            } else if (ppfDst[niEar][ni] < -1)
+            {
+                ppfDst[niEar][ni] = -1;
+            }
+        }
 	}
 }
 
