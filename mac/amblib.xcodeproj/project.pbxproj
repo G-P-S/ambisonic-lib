@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		005CF56D1DDA52EE005D7EE8 /* libmit_hrtf_lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 005CF56A1DDA3947005D7EE8 /* libmit_hrtf_lib.a */; };
 		009521CE1D63C6DF00A47621 /* AmbisonicEncoderDistSansDelay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 009521CC1D63C6DF00A47621 /* AmbisonicEncoderDistSansDelay.cpp */; };
 		009521CF1D63C6DF00A47621 /* AmbisonicEncoderDistSansDelay.h in Headers */ = {isa = PBXBuildFile; fileRef = 009521CD1D63C6DF00A47621 /* AmbisonicEncoderDistSansDelay.h */; };
 		009522831D67A7E200A47621 /* kiss_fft.c in Sources */ = {isa = PBXBuildFile; fileRef = 009522821D67A7E200A47621 /* kiss_fft.c */; };
@@ -59,6 +60,13 @@
 			containerPortal = 005CF5651DDA3947005D7EE8 /* mit_hrtf_lib.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC046055464E500DB518D;
+			remoteInfo = mit_hrtf_lib;
+		};
+		005CF56B1DDA52DD005D7EE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 005CF5651DDA3947005D7EE8 /* mit_hrtf_lib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
 			remoteInfo = mit_hrtf_lib;
 		};
 /* End PBXContainerItemProxy section */
@@ -130,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				005CF56D1DDA52EE005D7EE8 /* libmit_hrtf_lib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +278,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				005CF56C1DDA52DD005D7EE8 /* PBXTargetDependency */,
 			);
 			name = amblib;
 			productName = amblib;
@@ -345,6 +355,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		005CF56C1DDA52DD005D7EE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = mit_hrtf_lib;
+			targetProxy = 005CF56B1DDA52DD005D7EE8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1DEB91EC08733DB70010E9CD /* Debug */ = {
