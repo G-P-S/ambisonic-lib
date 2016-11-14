@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		005CF56D1DDA52EE005D7EE8 /* libmit_hrtf_lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 005CF56A1DDA3947005D7EE8 /* libmit_hrtf_lib.a */; };
 		009521CE1D63C6DF00A47621 /* AmbisonicEncoderDistSansDelay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 009521CC1D63C6DF00A47621 /* AmbisonicEncoderDistSansDelay.cpp */; };
 		009521CF1D63C6DF00A47621 /* AmbisonicEncoderDistSansDelay.h in Headers */ = {isa = PBXBuildFile; fileRef = 009521CD1D63C6DF00A47621 /* AmbisonicEncoderDistSansDelay.h */; };
 		009522831D67A7E200A47621 /* kiss_fft.c in Sources */ = {isa = PBXBuildFile; fileRef = 009522821D67A7E200A47621 /* kiss_fft.c */; };
@@ -138,7 +137,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				005CF56D1DDA52EE005D7EE8 /* libmit_hrtf_lib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
