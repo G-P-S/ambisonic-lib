@@ -54,18 +54,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		00E5DC191D107D4C00E4F9DC /* PBXContainerItemProxy */ = {
+		005CF5691DDA3947005D7EE8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 00E5DC151D107D4B00E4F9DC /* mit_hrtf_lib.xcodeproj */;
+			containerPortal = 005CF5651DDA3947005D7EE8 /* mit_hrtf_lib.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC046055464E500DB518D;
-			remoteInfo = mit_hrtf_lib;
-		};
-		00E5DC1B1D107DB700E4F9DC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 00E5DC151D107D4B00E4F9DC /* mit_hrtf_lib.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC045055464E500DB518D;
 			remoteInfo = mit_hrtf_lib;
 		};
 /* End PBXContainerItemProxy section */
@@ -84,6 +77,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		005CF5651DDA3947005D7EE8 /* mit_hrtf_lib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mit_hrtf_lib.xcodeproj; path = "../../mit-hrtf-lib/mac/mit_hrtf_lib.xcodeproj"; sourceTree = "<group>"; };
 		009521CC1D63C6DF00A47621 /* AmbisonicEncoderDistSansDelay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AmbisonicEncoderDistSansDelay.cpp; path = ../source/AmbisonicEncoderDistSansDelay.cpp; sourceTree = "<group>"; };
 		009521CD1D63C6DF00A47621 /* AmbisonicEncoderDistSansDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AmbisonicEncoderDistSansDelay.h; path = ../source/AmbisonicEncoderDistSansDelay.h; sourceTree = "<group>"; };
 		009522821D67A7E200A47621 /* kiss_fft.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = kiss_fft.c; path = ../../kissfft/kiss_fft.c; sourceTree = "<group>"; };
@@ -100,7 +94,6 @@
 		009522911D67A8EF00A47621 /* kiss_fftndr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kiss_fftndr.h; path = ../../kissfft/tools/kiss_fftndr.h; sourceTree = "<group>"; };
 		00DA556A1CF3A3EF002B2D0F /* kiss_fftr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = kiss_fftr.h; path = ../../kissfft/tools/kiss_fftr.h; sourceTree = "<group>"; };
 		00DA556C1CF3A414002B2D0F /* kiss_fft.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = kiss_fft.h; path = ../../kissfft/kiss_fft.h; sourceTree = "<group>"; };
-		00E5DC151D107D4B00E4F9DC /* mit_hrtf_lib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mit_hrtf_lib.xcodeproj; path = "/Users/jmariglio/Documents/shits/gopro-lib-cfmediaplayerg2/Mac/CFMediaPlayerLibG2/../../../3rdparty/mit-hrtf-lib/mac/mit_hrtf_lib.xcodeproj"; sourceTree = "<absolute>"; };
 		C9AEF69A10B0489900C7D86D /* Ambisonics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ambisonics.h; path = ../include/Ambisonics.h; sourceTree = SOURCE_ROOT; };
 		C9AEF69C10B048A700C7D86D /* AmbisonicBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AmbisonicBase.cpp; path = ../source/AmbisonicBase.cpp; sourceTree = SOURCE_ROOT; };
 		C9AEF69D10B048A700C7D86D /* AmbisonicBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AmbisonicBase.h; path = ../source/AmbisonicBase.h; sourceTree = SOURCE_ROOT; };
@@ -143,10 +136,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E5DC161D107D4B00E4F9DC /* Products */ = {
+		005CF5661DDA3947005D7EE8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				00E5DC1A1D107D4C00E4F9DC /* libmit_hrtf_lib.a */,
+				005CF56A1DDA3947005D7EE8 /* libmit_hrtf_lib.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,7 +147,7 @@
 		08FB7794FE84155DC02AAC07 /* amblib */ = {
 			isa = PBXGroup;
 			children = (
-				00E5DC151D107D4B00E4F9DC /* mit_hrtf_lib.xcodeproj */,
+				005CF5651DDA3947005D7EE8 /* mit_hrtf_lib.xcodeproj */,
 				00DA556C1CF3A414002B2D0F /* kiss_fft.h */,
 				009522881D67A8E000A47621 /* kissfft.hh */,
 				00DA556A1CF3A3EF002B2D0F /* kiss_fftr.h */,
@@ -276,7 +269,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				00E5DC1C1D107DB700E4F9DC /* PBXTargetDependency */,
 			);
 			name = amblib;
 			productName = amblib;
@@ -302,8 +294,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 00E5DC161D107D4B00E4F9DC /* Products */;
-					ProjectRef = 00E5DC151D107D4B00E4F9DC /* mit_hrtf_lib.xcodeproj */;
+					ProductGroup = 005CF5661DDA3947005D7EE8 /* Products */;
+					ProjectRef = 005CF5651DDA3947005D7EE8 /* mit_hrtf_lib.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -314,11 +306,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		00E5DC1A1D107D4C00E4F9DC /* libmit_hrtf_lib.a */ = {
+		005CF56A1DDA3947005D7EE8 /* libmit_hrtf_lib.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libmit_hrtf_lib.a;
-			remoteRef = 00E5DC191D107D4C00E4F9DC /* PBXContainerItemProxy */;
+			remoteRef = 005CF5691DDA3947005D7EE8 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -353,14 +345,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		00E5DC1C1D107DB700E4F9DC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = mit_hrtf_lib;
-			targetProxy = 00E5DC1B1D107DB700E4F9DC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1DEB91EC08733DB70010E9CD /* Debug */ = {
