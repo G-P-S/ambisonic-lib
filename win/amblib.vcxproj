@@ -70,22 +70,23 @@
     <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir>$(ProjectDir)..\library\$(Platform)\$(Configuration)</OutDir>
     <IntDir>$(Configuration)\</IntDir>
-    <IncludePath>C:\Users\jmariglio\Documents\shits1\3rdparty\kissfft\tools;C:\Users\jmariglio\Documents\shits1\3rdparty\mit-hrtf-lib\include;C:\Users\jmariglio\Documents\shits1\3rdparty\kissfft;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\jmariglio\Documents\shits1\3rdparty\kissfft\tools;C:\Users\jmariglio\Documents\shits1\3rdparty\mit-hrtf-lib\include;C:\Users\jmariglio\Documents\shits1\3rdparty\kissfft;$(IncludePath)</IncludePath>
+    <OutDir>$(ProjectDir)..\library\$(Platform)\$(Configuration)</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir>$(ProjectDir)..\library\$(Platform)\$(Configuration)</OutDir>
     <IntDir>$(Configuration)\</IntDir>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(ProjectDir)..\library\$(Platform)\$(Configuration)</OutDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\..\mit_hrtf_lib\include\;..\..\kiss_fft\;..\..\kiss_fft\tools\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\mit_hrtf_lib\include\;..\..\kiss_fft\;..\..\kiss_fft\tools\</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -106,8 +107,8 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\..\mit_hrtf_lib\include\;..\..\kiss_fft\;..\..\kiss_fft\tools\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\mit-hrtf-lib\include\;$(ProjectDir)..\..\kissfft\;$(ProjectDir)..\..\kissfft\tools\</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeader>
@@ -120,13 +121,15 @@
       <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
     </Lib>
     <PostBuildEvent>
-      <Message>Copying amblib.lib to library folder</Message>
-      <Command>copy "$(TargetPath)" "..\library\amblib.lib"</Command>
+      <Message>
+      </Message>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>..\..\mit_hrtf_lib\include\;..\..\kiss_fft\;..\..\kiss_fft\tools\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\mit-hrtf-lib\include\;$(ProjectDir)..\..\kissfft\;$(ProjectDir)..\..\kissfft\tools\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FloatingPointModel>Precise</FloatingPointModel>
@@ -135,15 +138,23 @@
       <DebugInformationFormat />
     </ClCompile>
     <PostBuildEvent>
-      <Message>Copying amblib.lib to library folder</Message>
-      <Command>copy "$(TargetPath)" "..\library\amblib.lib"</Command>
+      <Message>
+      </Message>
+      <Command>echo %$(ProjectDir)%</Command>
     </PostBuildEvent>
+    <PreLinkEvent>
+      <Command>
+      </Command>
+    </PreLinkEvent>
+    <PreBuildEvent>
+      <Command>echo c:%$(ProjectDir)%..\..\mit_hrtf_lib\include\</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>..\..\mit_hrtf_lib\include\;..\..\kiss_fft\;..\..\kiss_fft\tools\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\mit-hrtf-lib\include\;$(ProjectDir)..\..\kissfft\;$(ProjectDir)..\..\kissfft\tools\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FloatingPointModel>Precise</FloatingPointModel>
       <PrecompiledHeader>
       </PrecompiledHeader>
@@ -152,20 +163,21 @@
       </DebugInformationFormat>
     </ClCompile>
     <PostBuildEvent>
-      <Message>Copying amblib.lib to library folder</Message>
-      <Command>copy "$(TargetPath)" "..\library\amblib.lib"</Command>
+      <Message>
+      </Message>
+      <Command>copy "$(TargetPath)" "..\..\..\libs\$(Configuration)\amblib.lib"</Command>
     </PostBuildEvent>
+    <PreLinkEvent>
+      <Command>
+      </Command>
+    </PreLinkEvent>
+    <PreBuildEvent>
+      <Command>echo c:%$(ProjectDir)%..\..\mit_hrtf_lib\include\</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\kissfft\kiss_fft.c" />
-    <ClCompile Include="..\..\kissfft\tools\kfc.c" />
-    <ClCompile Include="..\..\kissfft\tools\kiss_fastfir.c" />
-    <ClCompile Include="..\..\kissfft\tools\kiss_fftnd.c" />
-    <ClCompile Include="..\..\kissfft\tools\kiss_fftndr.c" />
-    <ClCompile Include="..\..\kissfft\tools\kiss_fftr.c" />
     <ClCompile Include="..\..\mit-hrtf-lib\source\mit_hrtf_lib.c" />
     <ClCompile Include="..\source\AmbisonicBase.cpp" />
-    <ClCompile Include="..\source\AmbisonicBinauralizer.cpp" />
     <ClCompile Include="..\source\AmbisonicCommons.cpp" />
     <ClCompile Include="..\source\AmbisonicDecoder.cpp" />
     <ClCompile Include="..\source\AmbisonicEncoder.cpp" />
@@ -180,10 +192,6 @@
     <ClCompile Include="..\source\BFormat.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\kissfft\kissfft.hh" />
-    <ClInclude Include="..\..\kissfft\kiss_fft.h" />
-    <ClInclude Include="..\..\kissfft\tools\kiss_fftr.h" />
-    <ClInclude Include="..\..\kissfft\_kiss_fft_guts.h" />
     <ClInclude Include="..\..\mit-hrtf-lib\include\mit_hrtf_lib.h" />
     <ClInclude Include="..\source\AmbisonicBase.h" />
     <ClInclude Include="..\source\AmbisonicBinauralizer.h" />
@@ -191,7 +199,6 @@
     <ClInclude Include="..\source\AmbisonicDecoder.h" />
     <ClInclude Include="..\source\AmbisonicEncoder.h" />
     <ClInclude Include="..\source\AmbisonicEncoderDist.h" />
-    <ClInclude Include="..\source\AmbisonicEncoderDistSansDelay.h" />
     <ClInclude Include="..\source\AmbisonicMicrophone.h" />
     <ClInclude Include="..\source\AmbisonicProcessor.h" />
     <ClInclude Include="..\include\Ambisonics.h" />
