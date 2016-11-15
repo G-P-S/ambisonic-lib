@@ -53,23 +53,6 @@
 		C9AEF6D110B048C200C7D86D /* mit_hrtf_lib.h in Headers */ = {isa = PBXBuildFile; fileRef = C9AEF6D010B048C200C7D86D /* mit_hrtf_lib.h */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		00E5DC191D107D4C00E4F9DC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 00E5DC151D107D4B00E4F9DC /* mit_hrtf_lib.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2AAC046055464E500DB518D;
-			remoteInfo = mit_hrtf_lib;
-		};
-		00E5DC1B1D107DB700E4F9DC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 00E5DC151D107D4B00E4F9DC /* mit_hrtf_lib.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC045055464E500DB518D;
-			remoteInfo = mit_hrtf_lib;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		C9F05EF71A4C489600EEF233 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -100,7 +83,6 @@
 		009522911D67A8EF00A47621 /* kiss_fftndr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kiss_fftndr.h; path = ../../kissfft/tools/kiss_fftndr.h; sourceTree = "<group>"; };
 		00DA556A1CF3A3EF002B2D0F /* kiss_fftr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = kiss_fftr.h; path = ../../kissfft/tools/kiss_fftr.h; sourceTree = "<group>"; };
 		00DA556C1CF3A414002B2D0F /* kiss_fft.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = kiss_fft.h; path = ../../kissfft/kiss_fft.h; sourceTree = "<group>"; };
-		00E5DC151D107D4B00E4F9DC /* mit_hrtf_lib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mit_hrtf_lib.xcodeproj; path = "/Users/jmariglio/Documents/shits/gopro-lib-cfmediaplayerg2/Mac/CFMediaPlayerLibG2/../../../3rdparty/mit-hrtf-lib/mac/mit_hrtf_lib.xcodeproj"; sourceTree = "<absolute>"; };
 		C9AEF69A10B0489900C7D86D /* Ambisonics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ambisonics.h; path = ../include/Ambisonics.h; sourceTree = SOURCE_ROOT; };
 		C9AEF69C10B048A700C7D86D /* AmbisonicBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AmbisonicBase.cpp; path = ../source/AmbisonicBase.cpp; sourceTree = SOURCE_ROOT; };
 		C9AEF69D10B048A700C7D86D /* AmbisonicBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AmbisonicBase.h; path = ../source/AmbisonicBase.h; sourceTree = SOURCE_ROOT; };
@@ -143,18 +125,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E5DC161D107D4B00E4F9DC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				00E5DC1A1D107D4C00E4F9DC /* libmit_hrtf_lib.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		08FB7794FE84155DC02AAC07 /* amblib */ = {
 			isa = PBXGroup;
 			children = (
-				00E5DC151D107D4B00E4F9DC /* mit_hrtf_lib.xcodeproj */,
 				00DA556C1CF3A414002B2D0F /* kiss_fft.h */,
 				009522881D67A8E000A47621 /* kissfft.hh */,
 				00DA556A1CF3A3EF002B2D0F /* kiss_fftr.h */,
@@ -276,7 +249,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				00E5DC1C1D107DB700E4F9DC /* PBXTargetDependency */,
 			);
 			name = amblib;
 			productName = amblib;
@@ -300,28 +272,12 @@
 			);
 			mainGroup = 08FB7794FE84155DC02AAC07 /* amblib */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 00E5DC161D107D4B00E4F9DC /* Products */;
-					ProjectRef = 00E5DC151D107D4B00E4F9DC /* mit_hrtf_lib.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				D2AAC045055464E500DB518D /* amblib */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		00E5DC1A1D107D4C00E4F9DC /* libmit_hrtf_lib.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libmit_hrtf_lib.a;
-			remoteRef = 00E5DC191D107D4C00E4F9DC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D2AAC044055464E500DB518D /* Sources */ = {
@@ -354,14 +310,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		00E5DC1C1D107DB700E4F9DC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = mit_hrtf_lib;
-			targetProxy = 00E5DC1B1D107DB700E4F9DC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
 		1DEB91EC08733DB70010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -378,6 +326,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = amblib;
 				SDKROOT = macosx;
+				SEPARATE_STRIP = NO;
+				STRIP_INSTALLED_PRODUCT = NO;
 			};
 			name = Debug;
 		};
@@ -386,11 +336,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = amblib;
 				SDKROOT = macosx;
+				SEPARATE_STRIP = NO;
+				STRIP_INSTALLED_PRODUCT = NO;
 			};
 			name = Release;
 		};
