@@ -53,19 +53,6 @@
 		C9AEF6D110B048C200C7D86D /* mit_hrtf_lib.h in Headers */ = {isa = PBXBuildFile; fileRef = C9AEF6D010B048C200C7D86D /* mit_hrtf_lib.h */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		C9F05EF71A4C489600EEF233 /* Copy Files */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			name = "Copy Files";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		009521CC1D63C6DF00A47621 /* AmbisonicEncoderDistSansDelay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AmbisonicEncoderDistSansDelay.cpp; path = ../source/AmbisonicEncoderDistSansDelay.cpp; sourceTree = "<group>"; };
 		009521CD1D63C6DF00A47621 /* AmbisonicEncoderDistSansDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AmbisonicEncoderDistSansDelay.h; path = ../source/AmbisonicEncoderDistSansDelay.h; sourceTree = "<group>"; };
@@ -244,7 +231,6 @@
 				D2AAC043055464E500DB518D /* Headers */,
 				D2AAC044055464E500DB518D /* Sources */,
 				D289987405E68DCB004EDB86 /* Frameworks */,
-				C9F05EF71A4C489600EEF233 /* Copy Files */,
 			);
 			buildRules = (
 			);
