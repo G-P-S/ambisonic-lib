@@ -208,9 +208,6 @@
     <ClInclude Include="..\source\AmbisonicZoomer.h" />
     <ClInclude Include="..\source\BFormat.h" />
   </ItemGroup>
-  <ItemGroup>
-    <Text Include="..\doc\main doc page.txt" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
