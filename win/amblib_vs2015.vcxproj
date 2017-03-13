@@ -19,9 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{BC9C910B-FE8A-4CF5-8645-163408546E6E}</ProjectGuid>
+    <ProjectGuid>{2A4B732A-F110-4ABE-B06D-10805C13AEE2}</ProjectGuid>
     <RootNamespace>amblib</RootNamespace>
     <Keyword>Win32Proj</Keyword>
+    <ProjectName>amblib</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
